@@ -13,7 +13,9 @@ export class CaesarComponent implements OnInit {
     "name": "Caesar",
     "birthday": "Unknow",
     "power": "Lying"
-  }
+  };
+
+  keys = { "profile": ["power", "birthday", "name"] };
 
   constructor() { }
 

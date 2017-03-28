@@ -5,11 +5,20 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class EntryPipe implements PipeTransform {
 
-  transform(value: Object, args?: any): Array<KV> {
+  transform(value: Object, keys?: Array<string>): Array<KV> {
     let list = [];
-    for (let key in value) {
-      list.push(new KV(key, value[key]));
+    if (keys) {
+      for (let key of keys) {
+        if (value[key]) {
+          list.push(new KV(key, value[key]));
+        }
+      }
+    } else {
+      for (let key in value) {
+        list.push(new KV(key, value[key]));
+      }
     }
+
     return list;
   }
 
