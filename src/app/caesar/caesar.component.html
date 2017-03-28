@@ -1,0 +1,7 @@
+<div>
+  <div *ngFor="let kv of profile | entryPipe">
+    <label for="kv.key">{{kv.key}}</label>
+    <input name="kv.key" [(ngModel)]="kv.value">
+    <p>{{kv.value}}</p>
+  </div>
+</div>
