@@ -1,4 +1,9 @@
 <h1>
-    {{title}}
+  {{title}}
 </h1>
+<div *ngIf="time">
+  <label for="time">Time</label>
+  <p name="time">{{time}}</p>
+</div>
+<p *ngIf="error">{{error}}</p>
 <app-caesar></app-caesar>

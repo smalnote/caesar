@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CaesarComponent } from './caesar/caesar.component';
 import { EntryPipe } from './entry.pipe';
 
+import { CaesarService } from './caesar.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,7 @@ import { EntryPipe } from './entry.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CaesarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
