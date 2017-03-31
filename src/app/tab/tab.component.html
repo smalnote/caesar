@@ -1,0 +1,14 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li *ngFor="let t of tabs; let ti = index" [class.active]="activeTab == t">
+      <a href="#{{t}}" (click)="activeTab = t">{{t}}
+      <button class="close closeTab" type="button" (click)="tabs.splice(ti, 1); activeTab=tabs[0]">×</button>
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div *ngFor="let t of tabs" class="tab-pane" [class.active]="activeTab == t">
+      <h1>{{t}}</h1>
+    </div>
+  </div>
+</div>

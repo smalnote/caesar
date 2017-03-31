@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 
 @Injectable()
 export class CaesarService {
@@ -12,9 +13,11 @@ export class CaesarService {
   
   constructor(private http: Http) { }
   getTime(): Observable<Object> {
-    return this.http.get('/api/caesar.go/time')
+    let o = this.http.get('/api/caesar.go/time')
       .map(this.extractData)
+      .do(t => console.log(t))
       .catch(this.handleError);
+    return o;
   }
 
   private extractData(res: Response) {

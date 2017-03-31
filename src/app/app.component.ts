@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
     this.caesarService.getTime()
       .subscribe(
         res => {
-          console.log(res);
           if (res["status"] != "OK") {
             this.error = res["message"];
           } else {
