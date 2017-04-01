@@ -19,17 +19,5 @@ export class AppComponent implements OnInit {
   constructor(private caesarService: CaesarService) { }
 
   ngOnInit() {
-    this.caesarService.getTime()
-      .subscribe(
-        res => {
-          console.log(res);
-          if (res["status"] != "OK") {
-            this.error = res["message"];
-          } else {
-            this.time = res["time"];
-          }
-        },
-        error => this.error = <any>error
-      );
   }
 }

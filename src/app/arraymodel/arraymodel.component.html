@@ -1,0 +1,11 @@
+<button type="button" class="btn btn-primary" (click)="model.push('')">+</button>
+<button type="button" class="btn btn-primary" (click)="model.pop()">-</button>
+<div *ngFor="let item of model; let itemIndex = index; trackBy: trackByIndex;">
+  <label for="{{item}}">{{itemIndex}}</label>
+  <input name="{{item}}" [(ngModel)]="model[itemIndex]">
+</div>
+<ul>
+  <li *ngFor="let item of model;">
+    {{item}}
+  </li>
+</ul>
