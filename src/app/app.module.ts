@@ -9,13 +9,15 @@ import { EntryPipe } from './entry.pipe';
 
 import { CaesarService } from './caesar.service';
 import { TabComponent } from './tab/tab.component';
+import { ArraymodelComponent } from './arraymodel/arraymodel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CaesarComponent,
     EntryPipe,
-    TabComponent
+    TabComponent,
+    ArraymodelComponent
   ],
   imports: [
     BrowserModule,
