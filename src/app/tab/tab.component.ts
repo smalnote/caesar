@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabComponent implements OnInit {
 
-  tabs = [ "Red", "Green", "Blue" ]
+  tabs = [ "Red", "Green", "Blue", "Yellow", "Purple" ]
 
-  activeTab = "Red"
+  activeTab = 0
+
+  onTabClose(tabIndex: number) {
+    this.tabs.splice(tabIndex, 1);
+    if (tabIndex > this.tabs.length) {
+      tabIndex = this.tabs.length - 1;
+    }
+  }
 
   constructor() { }
 
