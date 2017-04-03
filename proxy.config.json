@@ -1,6 +1,6 @@
 {
   "/api/caesar.go/*": {
-    "target": "http://localhost:4300/",
+    "target": "http://localhost:4500/",
     "secure": false,
     "logLevel": "debug"
   }
