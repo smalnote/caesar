@@ -1,7 +1,7 @@
 <div>
   <ul class="nav nav-tabs">
     <li *ngFor="let t of tabs; let tabIndex = index" [class.active]="activeTab == tabIndex">
-      <a href="#" (click)="activeTab = tabIndex">{{t}}
+      <a (click)="activeTab = tabIndex">{{t}}
       <button class="close closeTab" type="button" (click)="onTabClose(tabIndex)">×</button>
       </a>
     </li>

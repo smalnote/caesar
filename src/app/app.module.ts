@@ -13,6 +13,7 @@ import { TabComponent } from './tab/tab.component';
 import { ArraymodelComponent } from './arraymodel/arraymodel.component';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListItemComponent } from './list-item/list-item.component';
     TabComponent,
     ArraymodelComponent,
     ListComponent,
-    ListItemComponent
+    ListItemComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
@@ -31,15 +33,31 @@ import { ListItemComponent } from './list-item/list-item.component';
     RouterModule.forRoot(
       [{
         path: '',
-        redirectTo: 'list',
+        redirectTo: 'caesar',
         pathMatch: 'full'
+      },
+      {
+        path: 'caesar',
+        component: CaesarComponent
       },
       {
         path: 'list',
         component: ListComponent
+      },
+      {
+        path: 'arraymodel',
+        component: ArraymodelComponent
+      },
+      {
+        path: 'tab',
+        component: TabComponent
       }, {
         path: 'list/item/:index',
         component: ListItemComponent
+      },
+      {
+        path: 'panel',
+        component: PanelComponent
       }]
     )
   ],
