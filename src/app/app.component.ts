@@ -13,8 +13,6 @@ import { CaesarService } from './caesar.service';
 export class AppComponent implements OnInit {
   title = 'Caesar I/O';
 
-  time: string;
-  error: any;
 
   constructor(private caesarService: CaesarService) { }
 
