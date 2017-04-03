@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CaesarComponent } from './caesar/caesar.component';
@@ -10,6 +11,8 @@ import { EntryPipe } from './entry.pipe';
 import { CaesarService } from './caesar.service';
 import { TabComponent } from './tab/tab.component';
 import { ArraymodelComponent } from './arraymodel/arraymodel.component';
+import { ListComponent } from './list/list.component';
+import { ListItemComponent } from './list-item/list-item.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,28 @@ import { ArraymodelComponent } from './arraymodel/arraymodel.component';
     CaesarComponent,
     EntryPipe,
     TabComponent,
-    ArraymodelComponent
+    ArraymodelComponent,
+    ListComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(
+      [{
+        path: '',
+        redirectTo: 'list',
+        pathMatch: 'full'
+      },
+      {
+        path: 'list',
+        component: ListComponent
+      }, {
+        path: 'list/item/:index',
+        component: ListItemComponent
+      }]
+    )
   ],
   providers: [CaesarService],
   bootstrap: [AppComponent]

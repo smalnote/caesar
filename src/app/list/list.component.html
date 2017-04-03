@@ -1,0 +1,10 @@
+<div>
+  <h3>Color list</h3>
+  <div class="grid grid-pad">
+    <div *ngFor="let color of colors; let colorIndex = index;" class="col-1-4">
+      <div class="module">
+        <a routerLink="/list/item/{{colorIndex}}">{{color}}</a>
+      </div>
+    </div>
+  </div>
+</div>
