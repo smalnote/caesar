@@ -14,6 +14,7 @@ import { ArraymodelComponent } from './arraymodel/arraymodel.component';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { PanelComponent } from './panel/panel.component';
+import { MyhighlightDirective } from './myhighlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PanelComponent } from './panel/panel.component';
     ArraymodelComponent,
     ListComponent,
     ListItemComponent,
-    PanelComponent
+    PanelComponent,
+    MyhighlightDirective
   ],
   imports: [
     BrowserModule,
