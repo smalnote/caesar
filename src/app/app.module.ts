@@ -15,6 +15,7 @@ import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyhighlightDirective } from './myhighlight.directive';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MyhighlightDirective } from './myhighlight.directive';
     ListComponent,
     ListItemComponent,
     PanelComponent,
-    MyhighlightDirective
+    MyhighlightDirective,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,10 @@ import { MyhighlightDirective } from './myhighlight.directive';
       {
         path: 'panel',
         component: PanelComponent
+      },
+      {
+        path: 'dropdown',
+        component: DropdownComponent
       }]
     )
   ],

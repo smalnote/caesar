@@ -17,6 +17,9 @@
         <li [class.active]="activeTab == 'panel'" myHighlight (click)="activeTab = 'panel'">
           <a routerLink="/panel">Panel<span class="sr-only">(current)</span></a>
         </li>
+        <li [class.active]="activeTab == 'dropdown'" myHighlight (click)="activeTab = 'dropdown'">
+          <a routerLink="/dropdown">Dropdown<span class="sr-only">(current)</span></a>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,20 @@
+<div class="form-group">
+  <select class="form-control" [(ngModel)]="platform" name="platform" (change)="onSelectPlatform()">
+    <option *ngFor="let platform of addrs | entryPipe">{{platform.key}}</option>
+  </select>
+</div>
+
+<div *ngIf="platform" class="form-group">
+  <select class="form-control" [(ngModel)]="enviroment" name="enviroment" (change)="onSelectEnv()">
+    <option *ngFor="let enviroment of addrs[platform] | entryPipe">{{enviroment.key}}</option>
+  </select>
+</div>
+
+<div *ngIf="enviroment" class="form-group">
+  <select class="form-control" [(ngModel)]="entry" name="entry" (change)="onSelectEntry()">
+    <option *ngFor="let entry of addrs[platform][enviroment] | entryPipe">{{entry.key}}</option>
+  </select>
+</div>
+<p *ngIf="addr">
+  {{addr.url}} {{addr.ip}} {{addr.port}}
+</p>
