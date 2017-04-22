@@ -52,6 +52,22 @@ export class DropdownComponent implements OnInit {
     }
   }
 
+  selectDefault() {
+    for (let platform in this.addrs) {
+      this.platform = platform;
+      break;
+    }
+    for (let env in this.addrs[this.platform]) {
+      this.enviroment = env;
+      break;
+    }
+    for (let entry in this.addrs[this.platform][this.enviroment]) {
+      this.entry = entry;
+      break;
+    }
+    this.addr = this.addrs[this.platform][this.enviroment][this.entry];
+  }
+
   onSelectPlatform() {
     if (!this.platform) {
       return;
@@ -88,6 +104,7 @@ export class DropdownComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectDefault();
   }
 
 }
