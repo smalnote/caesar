@@ -16,6 +16,7 @@ import { ListItemComponent } from './list-item/list-item.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyhighlightDirective } from './myhighlight.directive';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     ListItemComponent,
     PanelComponent,
     MyhighlightDirective,
-    DropdownComponent
+    DropdownComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +68,10 @@ import { DropdownComponent } from './dropdown/dropdown.component';
       {
         path: 'dropdown',
         component: DropdownComponent
+      },
+      {
+        path: 'form',
+        component: FormComponent
       }]
     )
   ],

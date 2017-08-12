@@ -1,0 +1,49 @@
+<form *ngIf="model" (ngSubmit)="onSubmit()" #thisForm="ngForm">
+
+  <div id="header" class="panel panel-default">
+    <div class="panel-heading">{{model.header.itfNam}}</div>
+    <div id="interfaces" class="panel-body">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th *ngFor="let field of model.header.itfFed">{{field.fedNam}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngFor="let field of model.header.itfFed">
+              <input required type="text" [name]="field.fedNam" [(ngModel)]="field.fedVal" [class.width80]="field.fedLen >= 0 && field.fedLen <= 8" [class.width120]="field.fedLen > 8 && field.fedLen <= 16" [class.width160]="field.fedLen > 16">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngFor="let interfs of model.interfaces" class="panel panel-default">
+    <div class="panel-heading" *ngIf="interfs && interfs.length > 0">{{interfs[0].itfNam}}</div>
+    <div class="panel-body">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr *ngIf="interfs && interfs.length > 0">
+            <th *ngFor="let field of interfs[0].itfFed">{{field.fedNam}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let interf of interfs">
+            <td *ngFor="let field of interf.itfFed">
+              <input required type="text" [name]="field.fedNam" [(ngModel)]="field.fedVal" [class.width80]="field.fedLen >= 0 && field.fedLen <= 8" [class.width120]="field.fedLen > 8 && field.fedLen <= 16" [class.width160]="field.fedLen > 16">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  <p>{{message}}</p>
+
+</form>

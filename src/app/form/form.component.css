@@ -1,0 +1,51 @@
+.table {
+  width: auto;
+}
+
+.table>tbody>tr>td,
+.table>tfoot>tr>td,
+.table>thead>tr>td {
+  padding: 2px;
+}
+
+input {
+  padding: 0;
+  width: 80px;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border: 0;
+  border-left: 2px solid #41A947;
+  /* green */
+}
+
+.ng-invalid:not(form) {
+  border: 0;
+  border-left: 2px solid #a94442;
+  /* red */
+}
+
+.panel {
+  width: max-content;
+}
+
+.panel-body {
+  padding: 0;
+}
+
+.table {
+  margin: 0;
+}
+
+.width80 {
+  width: 80px;
+}
+
+.width120 {
+  width: 120px;
+}
+
+.width160 {
+  width: 160px;
+}
