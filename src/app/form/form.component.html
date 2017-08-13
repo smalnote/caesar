@@ -12,7 +12,7 @@
         <tbody>
           <tr>
             <td *ngFor="let field of model.header.itfFed">
-              <input required type="text" [name]="field.fedNam" [(ngModel)]="field.fedVal" [class.width80]="field.fedLen >= 0 && field.fedLen <= 8" [class.width120]="field.fedLen > 8 && field.fedLen <= 16" [class.width160]="field.fedLen > 16">
+              <input [(ngModel)]="field.fedVal" required type="text" [name]="field.fedNam" pattern="[A-Z0-9#$]{1,{{field.fedLen}}}" [style.width]="getInputWidth(field.fedLen) + 'px'" [maxlength]="field.fedLen">
             </td>
           </tr>
         </tbody>
@@ -32,7 +32,7 @@
         <tbody>
           <tr *ngFor="let interf of interfs">
             <td *ngFor="let field of interf.itfFed">
-              <input required type="text" [name]="field.fedNam" [(ngModel)]="field.fedVal" [class.width80]="field.fedLen >= 0 && field.fedLen <= 8" [class.width120]="field.fedLen > 8 && field.fedLen <= 16" [class.width160]="field.fedLen > 16">
+              <input [(ngModel)]="field.fedVal" required type="text" [name]="field.fedNam" [style.width]="getInputWidth(field.fedLen) + 'px'">
             </td>
           </tr>
         </tbody>

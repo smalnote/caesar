@@ -19,6 +19,16 @@ export class FormComponent implements OnInit {
     this.model.interfaces.push(xs);
   }
 
+  getInputWidth(fedLen: number): number {
+    const MIN_WIDTH = 80;
+    const MAX_WIDTH = 200;
+    const CHAR_WIDTH = 10;
+    let width = fedLen * 10;
+    width = width < MIN_WIDTH ? MIN_WIDTH : width;
+    width = width > MAX_WIDTH ? MAX_WIDTH : width;
+    return width;
+  }
+
   onSubmit() {
     this.message = 'submitted';
   }
