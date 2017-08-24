@@ -1,4 +1,8 @@
-<button class="btn btn-primary" type="button" (click)="visible = !visible"> Button with data-target </button>
-<div [class.collapse.in]="visible" [class.collapse]="!visible">
-  <div class="well"> Fusion </div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <button class="btn btn-xs btn-info" type="button" (click)="visible = !visible"> Button with data-target </button>
+  </div>
+  <div class="panel-body" [class.collapse.in]="visible" [class.collapse]="!visible">
+    <div class="well"> Fusion </div>
+  </div>
 </div>

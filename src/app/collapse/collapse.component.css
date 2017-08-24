@@ -1,0 +1,7 @@
+.panel {
+  width: max-content;
+}
+
+.well {
+  min-width: 2048px;
+}

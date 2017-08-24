@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollapseComponent implements OnInit {
 
+  visible = true;
+
   constructor() { }
 
   ngOnInit() {
