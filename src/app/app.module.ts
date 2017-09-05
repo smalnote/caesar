@@ -18,6 +18,7 @@ import { MyhighlightDirective } from './myhighlight.directive';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { FormComponent } from './form/form.component';
 import { CollapseComponent } from './collapse/collapse.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CollapseComponent } from './collapse/collapse.component';
     MyhighlightDirective,
     DropdownComponent,
     FormComponent,
-    CollapseComponent
+    CollapseComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +80,10 @@ import { CollapseComponent } from './collapse/collapse.component';
       {
         path: 'collapse',
         component: CollapseComponent
+      },
+      {
+        path: 'search',
+        component: SearchComponent
       }]
     )
   ],
