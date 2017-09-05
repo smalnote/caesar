@@ -17,6 +17,7 @@ import { PanelComponent } from './panel/panel.component';
 import { MyhighlightDirective } from './myhighlight.directive';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { FormComponent } from './form/form.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormComponent } from './form/form.component';
     PanelComponent,
     MyhighlightDirective,
     DropdownComponent,
-    FormComponent
+    FormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -72,6 +74,10 @@ import { FormComponent } from './form/form.component';
       {
         path: 'form',
         component: FormComponent
+      },
+      {
+        path: 'search',
+        component: SearchComponent
       }]
     )
   ],

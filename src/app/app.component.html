@@ -23,6 +23,9 @@
         <li [class.active]="activeTab == 'form'" myHighlight (click)="activeTab = 'form'">
           <a routerLink="/form">Form<span class="sr-only">(current)</span></a>
         </li>
+        <li [class.active]="activeTab == 'search'" myHighlight (click)="activeTab = 'search'">
+          <a routerLink="/search">Search<span class="sr-only">(current)</span></a>
+        </li>
       </ul>
     </div>
   </div>
