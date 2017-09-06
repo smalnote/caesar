@@ -1,9 +1,10 @@
-<form autocomplete="off">
-  <input class="form-control search-box" name="search-box" type="text">
-  <ul class="list-group">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
+<form autocomplete="off" #form>
+  <input class="form-control search-box" #searchBox (keyup.enter)="searchBox.blur()" list="suggest-list" name="search-box" type="text">
+  <datalist id="suggest-list">
+    <option>Dapibus ac facilisis in</option>
+    <option>Cras justo odio</option>
+    <option>Porta ac consectetur ac</option>
+    <option>Vestibulum at eros</option>
+  </datalist>
+  <button #btnGo class="btn btn-success">Go!</button>
 </form>
