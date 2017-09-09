@@ -1,8 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CaesarComponent } from './caesar/caesar.component';
@@ -19,6 +20,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { FormComponent } from './form/form.component';
 import { CollapseComponent } from './collapse/collapse.component';
 import { SearchComponent } from './search/search.component';
+import { AniComponent } from './ani/ani.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +36,14 @@ import { SearchComponent } from './search/search.component';
     DropdownComponent,
     FormComponent,
     CollapseComponent,
-    SearchComponent
+    SearchComponent,
+    AniComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       [{
         path: '',
@@ -84,6 +88,10 @@ import { SearchComponent } from './search/search.component';
       {
         path: 'search',
         component: SearchComponent
+      },
+      {
+        path: 'ani',
+        component: AniComponent
       }]
     )
   ],
