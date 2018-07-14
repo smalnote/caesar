@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "caesar.io": {
+    "caesar": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -48,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "caesar.io:build"
+            "browserTarget": "caesar:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "caesar.io:build:production"
+              "browserTarget": "caesar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "caesar.io:build"
+            "browserTarget": "caesar:build"
           }
         },
         "test": {
@@ -91,7 +91,7 @@
         }
       }
     },
-    "caesar.io-e2e": {
+    "caesar-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -100,7 +100,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "caesar.io:serve"
+            "devServerTarget": "caesar:serve"
           }
         },
         "lint": {
@@ -115,7 +115,7 @@
       }
     }
   },
-  "defaultProject": "caesar.io",
+  "defaultProject": "caesar",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

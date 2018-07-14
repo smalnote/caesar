@@ -1,4 +1,4 @@
-# Caesar.Io
+# Caesar
 
 Samples of Angular
 

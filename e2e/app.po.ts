@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Caesar.IoPage {
+export class CaesarPage {
   navigateTo() {
     return browser.get('/');
   }
