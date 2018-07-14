@@ -1,0 +1,14 @@
+.clickable {
+  cursor: pointer;
+  background: bisque;
+  width: fit-content;
+  padding: 0.5em;
+  min-width: 4em;
+  min-height: 1.5em;
+  border-radius: 0.25em;
+  user-select: none;
+}
+
+.clickable:hover {
+  background: burlywood;
+}

@@ -21,6 +21,8 @@ import { FormComponent } from './form/form.component';
 import { CollapseComponent } from './collapse/collapse.component';
 import { SearchComponent } from './search/search.component';
 import { AniComponent } from './ani/ani.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { ClickableDirective } from './clickable.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AniComponent } from './ani/ani.component';
     FormComponent,
     CollapseComponent,
     SearchComponent,
-    AniComponent
+    AniComponent,
+    DirectivesComponent,
+    ClickableDirective
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,7 @@ import { AniComponent } from './ani/ani.component';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: 'caesar',
+        redirectTo: 'directives',
         pathMatch: 'full'
       },
       {
@@ -57,6 +61,10 @@ import { AniComponent } from './ani/ani.component';
       {
         path: 'tab',
         component: TabComponent
+      },
+      {
+        path: 'directives',
+        component: DirectivesComponent
       }
     ])
   ],

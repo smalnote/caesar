@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab.component.css']
 })
 export class TabComponent implements OnInit {
+  tabs = ['Red', 'Green', 'Blue', 'Yellow', 'Purple'];
 
-  tabs = [ "Red", "Green", "Blue", "Yellow", "Purple" ]
-
-  activeTab = 0
+  activeTab = 0;
 
   onTabClose(tabIndex: number) {
     this.tabs.splice(tabIndex, 1);
@@ -18,9 +17,7 @@ export class TabComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
