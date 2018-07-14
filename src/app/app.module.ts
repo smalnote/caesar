@@ -44,8 +44,8 @@ import { AniComponent } from './ani/ani.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(
-      [{
+    RouterModule.forRoot([
+      {
         path: '',
         redirectTo: 'caesar',
         pathMatch: 'full'
@@ -55,47 +55,12 @@ import { AniComponent } from './ani/ani.component';
         component: CaesarComponent
       },
       {
-        path: 'list',
-        component: ListComponent
-      },
-      {
-        path: 'arraymodel',
-        component: ArraymodelComponent
-      },
-      {
         path: 'tab',
         component: TabComponent
-      }, {
-        path: 'list/item/:index',
-        component: ListItemComponent
-      },
-      {
-        path: 'panel',
-        component: PanelComponent
-      },
-      {
-        path: 'dropdown',
-        component: DropdownComponent
-      },
-      {
-        path: 'form',
-        component: FormComponent
-      },
-      {
-        path: 'collapse',
-        component: CollapseComponent
-      },
-      {
-        path: 'search',
-        component: SearchComponent
-      },
-      {
-        path: 'ani',
-        component: AniComponent
-      }]
-    )
+      }
+    ])
   ],
   providers: [CaesarService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

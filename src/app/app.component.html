@@ -1,36 +1,12 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/caesar" (click)="activeTab = ''">Caesar</a>
+      <a class="navbar-brand" routerLink="" (click)="activeTab = ''">Caesar</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li [class.active]="activeTab == 'list'" [myHighlight]="'yellow'" (click)="activeTab = 'list'">
-          <a routerLink="/list">List <span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'arraymodel'" myHighlight (click)="activeTab = 'arraymodel'">
-          <a routerLink="/arraymodel">ArrayModel <span class="sr-only">(current)</span></a>
-        </li>
         <li [class.active]="activeTab == 'tab'" myHighlight (click)="activeTab = 'tab'">
           <a routerLink="/tab">Tab<span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'panel'" myHighlight (click)="activeTab = 'panel'">
-          <a routerLink="/panel">Panel<span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'dropdown'" myHighlight (click)="activeTab = 'dropdown'">
-          <a routerLink="/dropdown">Dropdown<span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'form'" myHighlight (click)="activeTab = 'form'">
-          <a routerLink="/form">Form<span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'collapse'" myHighlight (click)="activeTab = 'collapse'">
-          <a routerLink="/collapse">Collapse<span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'search'" myHighlight (click)="activeTab = 'search'">
-          <a routerLink="/search">Search<span class="sr-only">(current)</span></a>
-        </li>
-        <li [class.active]="activeTab == 'ani'" myHighlight (click)="activeTab = 'ani'">
-          <a routerLink="/ani">Animation<span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>

@@ -1,7 +1,60 @@
 <div>
-  <div *ngFor="let kv of profile | entryPipe: keys.profile">
-    <label for="kv.key">{{kv.key}}</label>
-    <input name="kv.key" [(ngModel)]="kv.value">
-    <p>{{kv.value}}</p>
+  <ul class="nav nav-tabs">
+    <li [class.active]="activeTab == 'ani'">
+      <a (click)="activeTab = 'ani'">Animation</a>
+    </li>
+    <li [class.active]="activeTab == 'arraymodel'">
+      <a (click)="activeTab = 'arraymodel'">Arraym Model</a>
+    </li>
+    <li [class.active]="activeTab == 'collapse'">
+      <a (click)="activeTab = 'collapse'">Collapse</a>
+    </li>
+    <li [class.active]="activeTab == 'dropdown'">
+      <a (click)="activeTab = 'dropdown'">Dropdown</a>
+    </li>
+    <li [class.active]="activeTab == 'form'">
+      <a (click)="activeTab = 'form'">Form</a>
+    </li>
+    <li [class.active]="activeTab == 'list'">
+      <a (click)="activeTab = 'list'">List</a>
+    </li>
+    <li [class.active]="activeTab == 'list-item'">
+      <a (click)="activeTab = 'list-item'">List Item</a>
+    </li>
+    <li [class.active]="activeTab == 'panel'">
+      <a (click)="activeTab = 'panel'">Panel</a>
+    </li>
+    <li [class.active]="activeTab == 'search'">
+      <a (click)="activeTab = 'search'">Search</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane" [class.active]="activeTab == 'ani'">
+      <app-ani></app-ani>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'arraymodel'">
+      <app-arraymodel></app-arraymodel>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'collapse'">
+      <app-collapse></app-collapse>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'dropdown'">
+      <app-dropdown></app-dropdown>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'form'">
+      <app-form></app-form>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'list'">
+      <app-list></app-list>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'list-item'">
+      <app-list-item></app-list-item>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'panel'">
+      <app-panel></app-panel>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'search'">
+      <app-search></app-search>
+    </div>
   </div>
 </div>

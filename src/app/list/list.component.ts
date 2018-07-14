@@ -6,12 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  colors = ['Red', 'Green', 'Blue', 'Purple', 'Yellow', 'Black', 'White'];
 
-  colors = [ "Red", "Green", "Blue", "Purple", "Yellow", "Black", "White" ]
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

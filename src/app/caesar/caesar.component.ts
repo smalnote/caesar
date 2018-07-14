@@ -8,18 +8,9 @@ import { EntryPipe } from '../entry.pipe';
   styleUrls: ['./caesar.component.css']
 })
 export class CaesarComponent implements OnInit {
+  activeTab = 'ani';
 
-  profile = {
-    "name": "Caesar",
-    "birthday": "Unknow",
-    "power": "Lying"
-  };
+  constructor() {}
 
-  keys = { "profile": ["power", "birthday", "name"] };
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
