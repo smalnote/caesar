@@ -9,11 +9,10 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class CaesarService {
-  
-  
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
   getTime(): Observable<Object> {
-    let o = this.http.get('/api/caesar.go/time')
+    const o = this.http
+      .get('/api/caesar.go/time')
       .map(this.extractData)
       .do(t => console.log(t))
       .catch(this.handleError);
@@ -21,7 +20,7 @@ export class CaesarService {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
+    const body = res.json();
     return body || {};
   }
 
