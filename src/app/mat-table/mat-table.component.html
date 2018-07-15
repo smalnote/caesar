@@ -8,11 +8,11 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <span>Put your table here!</span>
+    <app-basic-table></app-basic-table>
 
   </mat-expansion-panel>
 
-  <mat-expansion-panel>
+  <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Simple material table
@@ -21,7 +21,7 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <span>Put your table here!</span>
+    <app-sort-table></app-sort-table>
 
   </mat-expansion-panel>
 </mat-accordion>

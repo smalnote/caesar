@@ -3,4 +3,5 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.tabSize": 2,
   "prettier.singleQuote": true,
+  "editor.suggestOnTriggerCharacters": true,
 }

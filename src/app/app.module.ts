@@ -28,6 +28,7 @@ import { DirectivesComponent } from './caesar/directives/directives.component';
 import { ClickableDirective } from './caesar/clickable.directive';
 import { MatTableComponent } from './mat-table/mat-table.component';
 import { BasicTableComponent } from './mat-table/basic-table/basic-table.component';
+import { SortTableComponent } from './mat-table/sort-table/sort-table.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { BasicTableComponent } from './mat-table/basic-table/basic-table.compone
     DirectivesComponent,
     ClickableDirective,
     MatTableComponent,
-    BasicTableComponent
+    BasicTableComponent,
+    SortTableComponent
   ],
   imports: [
     BrowserModule,
