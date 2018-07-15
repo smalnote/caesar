@@ -10,23 +10,19 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./list-item.component.css']
 })
 export class ListItemComponent implements OnInit {
+  colors = ['Red', 'Green', 'Blue', 'Purple', 'Yellow', 'Black', 'White'];
 
-  colors = [ "Red", "Green", "Blue", "Purple", "Yellow", "Black", "White" ]
+  color = '';
 
-  color = "";
-
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-  ) { }
+  constructor(private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
-    this.route.params
-      .subscribe((params: Params) => this.color = this.colors[+params['index']]);
+    this.route.params.subscribe(
+      (params: Params) => (this.color = this.colors[+params['index']])
+    );
   }
 
   onBack() {
     this.location.back();
   }
-
 }

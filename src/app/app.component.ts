@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 
-import { CaesarService } from './caesar.service';
+import { CaesarService } from './caesar/caesar.service';
 
 @Component({
   moduleId: module.id,

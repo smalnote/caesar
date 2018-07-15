@@ -5,8 +5,11 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li [class.active]="activeTab == 'directives'" myHighlight (click)="activeTab = 'directives'">
+        <li [class.active]="activeTab == 'directives'" [myHighlight]="'orange'" (click)="activeTab = 'directives'">
           <a routerLink="/directives">Directives<span class="sr-only">(current)</span></a>
+        </li>
+        <li [class.active]="activeTab == 'mat-table'" (click)="activeTab = 'mat-table'">
+          <a routerLink="/mat-table">Mat Table<span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>

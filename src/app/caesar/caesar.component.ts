@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { EntryPipe } from '../entry.pipe';
-
 @Component({
   selector: 'app-caesar',
   templateUrl: './caesar.component.html',
