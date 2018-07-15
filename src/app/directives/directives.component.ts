@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
-  times = 0;
+  times = 20;
 
   onClick() {
-    this.times++;
+    this.times += 5;
+    if (this.times > 100) {
+      this.times = this.times % 100;
+    }
   }
 
   constructor() { }

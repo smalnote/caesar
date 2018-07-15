@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ControlModule } from '../control/control.module';
+
 import { AppComponent } from './app.component';
 import { CaesarComponent } from './caesar/caesar.component';
 import { EntryPipe } from './entry.pipe';
@@ -41,13 +43,14 @@ import { ClickableDirective } from './clickable.directive';
     SearchComponent,
     AniComponent,
     DirectivesComponent,
-    ClickableDirective
+    ClickableDirective,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
+    ControlModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -68,6 +71,8 @@ import { ClickableDirective } from './clickable.directive';
       }
     ])
   ],
+  entryComponents: [],
+  exports: [],
   providers: [CaesarService],
   bootstrap: [AppComponent]
 })

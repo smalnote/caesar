@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { CaesarService } from './caesar.service';
@@ -13,8 +13,7 @@ import { CaesarService } from './caesar.service';
 export class AppComponent implements OnInit {
   title = 'Caesar I/O';
 
-  activeTab: string = '';
-
+  activeTab = '';
 
   constructor(private caesarService: CaesarService) { }
 
