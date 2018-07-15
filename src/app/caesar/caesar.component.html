@@ -27,6 +27,9 @@
     <li [class.active]="activeTab == 'search'">
       <a (click)="activeTab = 'search'">Search</a>
     </li>
+    <li [class.active]="activeTab == 'tab'">
+      <a r (click)="activeTab = 'tab'">Tab</a>
+    </li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane" [class.active]="activeTab == 'ani'">
@@ -55,6 +58,9 @@
     </div>
     <div class="tab-pane" [class.active]="activeTab == 'search'">
       <app-search></app-search>
+    </div>
+    <div class="tab-pane" [class.active]="activeTab == 'tab'">
+      <app-tab></app-tab>
     </div>
   </div>
 </div>
