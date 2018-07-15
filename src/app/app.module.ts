@@ -4,45 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {
-  MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule
-} from '@angular/material';
+import { MatModule } from '../mat/mat.module';
 
 import { ControlModule } from 'control/control.module';
 
@@ -65,6 +27,7 @@ import { AniComponent } from './caesar/ani/ani.component';
 import { DirectivesComponent } from './caesar/directives/directives.component';
 import { ClickableDirective } from './caesar/clickable.directive';
 import { MatTableComponent } from './mat-table/mat-table.component';
+import { BasicTableComponent } from './mat-table/basic-table/basic-table.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +48,7 @@ import { MatTableComponent } from './mat-table/mat-table.component';
     DirectivesComponent,
     ClickableDirective,
     MatTableComponent,
+    BasicTableComponent
   ],
   imports: [
     BrowserModule,
@@ -92,6 +56,7 @@ import { MatTableComponent } from './mat-table/mat-table.component';
     HttpModule,
     BrowserAnimationsModule,
     ControlModule,
+    MatModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -110,44 +75,7 @@ import { MatTableComponent } from './mat-table/mat-table.component';
         path: 'mat-table',
         component: MatTableComponent
       }
-    ]),
-    CdkTableModule,
-    CdkTreeModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatStepperModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
+    ])
   ],
   entryComponents: [],
   exports: [],
