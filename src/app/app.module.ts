@@ -29,6 +29,9 @@ import { ClickableDirective } from './caesar/clickable.directive';
 import { MatTableComponent } from './mat-table/mat-table.component';
 import { BasicTableComponent } from './mat-table/basic-table/basic-table.component';
 import { SortTableComponent } from './mat-table/sort-table/sort-table.component';
+import { ViewchildComponent } from './caesar/viewchild/viewchild.component';
+import { ParentComponent } from './caesar/viewchild/parent/parent.component';
+import { ChildComponent } from './caesar/viewchild/child/child.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { SortTableComponent } from './mat-table/sort-table/sort-table.component'
     ClickableDirective,
     MatTableComponent,
     BasicTableComponent,
-    SortTableComponent
+    SortTableComponent,
+    ViewchildComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
