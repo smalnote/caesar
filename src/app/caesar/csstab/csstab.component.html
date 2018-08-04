@@ -1,0 +1,14 @@
+<div class="nav-container">
+  <div class="nav-header">
+    <button class="nav-tab" (click)="activeTab = 'a'" [class.active]="activeTab == 'a'">Tab A</button>
+    <button class="nav-tab" (click)="activeTab = 'b'" [class.active]="activeTab == 'b'">Tab B</button>
+  </div>
+  <div class="nav-body">
+    <div class="nav-content" [class.active]="activeTab == 'a'">
+      Content A
+    </div>
+    <div class="nav-content" [class.active]="activeTab == 'b'">
+      Content B
+    </div>
+  </div>
+</div>

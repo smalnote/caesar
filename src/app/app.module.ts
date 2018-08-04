@@ -32,6 +32,7 @@ import { SortTableComponent } from './mat-table/sort-table/sort-table.component'
 import { ViewchildComponent } from './caesar/viewchild/viewchild.component';
 import { ParentComponent } from './caesar/viewchild/parent/parent.component';
 import { ChildComponent } from './caesar/viewchild/child/child.component';
+import { CsstabComponent } from './caesar/csstab/csstab.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ChildComponent } from './caesar/viewchild/child/child.component';
     SortTableComponent,
     ViewchildComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CsstabComponent
   ],
   imports: [
     BrowserModule,

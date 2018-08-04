@@ -1,0 +1,39 @@
+.nav-container {
+  width: 20rem;
+  margin: 4rem auto;
+  padding: 0.1rem;
+  border: 0.1rem solid #ddd;
+}
+
+.nav-header {
+  font-size: 0rem;
+}
+
+.nav-tab {
+  width: 10rem;
+  height: 6rem;
+  box-sizing: border-box;
+  outline: none;
+  background: #fff;
+  border: 0.1rem solid #ddd;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-tab:focus-within, .nav-tab.active {
+  color: #fff;
+  background: #ffcc00;
+}
+
+.nav-body {
+  font-size: 2rem;
+  height: 6rem;
+}
+
+.nav-content {
+  display: none;
+}
+
+.nav-content.active {
+  display: block;
+}
